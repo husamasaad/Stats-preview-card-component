@@ -1,0 +1,132 @@
+
+/* Global Rules -start */
+
+:root {
+    --main-bg: hsl(233, 47%, 7%);
+    --card-bg: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stats-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Global Rules -end */
+
+body {
+    background-color: var(--main-bg);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 315px;
+    background-color: var(--card-bg);
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    section {
+        height: fit-content;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+article {
+    flex-basis: 50%;
+    padding: 3.3rem;
+}
+@media (max-width: 767px) {
+    article {
+        padding: 1rem;
+    }
+}
+
+h1 {
+    font-weight: 900;
+    color: white;
+    font-size: 1.5rem;
+} 
+
+strong {
+    color: var(--soft-violet);
+}
+
+p {
+    color: var(--main-paragraph);
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+.stats {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2.66rem;
+}
+
+@media (max-width: 767px) {
+    .stats {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .stat {
+        margin-top: 15px;
+        margin-right: 0;
+    }
+}
+
+b {
+    color: white;
+}
+
+span {
+    color: var(--stats-headings);
+}
+
+picture {
+    flex-basis: 50%;
+    position: relative;
+}
+
+
+picture img {
+    width: 100%;
+}
+
+picture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: hsl(277deg 64% 61% / 40%);
+}
